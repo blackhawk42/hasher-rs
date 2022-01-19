@@ -1,0 +1,7 @@
+/target
+
+# VS Code
+/.vscode
+
+# Heavy files for becnhmarking
+/test_files
