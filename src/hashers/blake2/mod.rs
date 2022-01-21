@@ -17,9 +17,9 @@ pub struct Blake2bHasher {
 
 impl Blake2bHasher {
     /// Creates a new Blake2bHasher.
-    /// 
+    ///
     /// # Panics
-    /// 
+    ///
     /// Will panic if `digest_size == 0` or `digest_size > 64` (max digest size for blake2b).
     pub fn new(digest_size: usize) -> Self {
         if digest_size > 64 || digest_size == 0 {

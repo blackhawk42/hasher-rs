@@ -13,7 +13,7 @@ use hasher::hashers;
 
 /// Hash a list of files with a given algorithm and print its sums.
 struct Cli {
-    /// Hashing algorithm to use
+    /// Hashing algorithm to use.
     #[clap(long, short, arg_enum, default_value_t = HashAlgo::CRC32)]
     algo: HashAlgo,
 
@@ -21,7 +21,8 @@ struct Cli {
     #[clap(long, short)]
     unsorted: bool,
 
-    /// Files to hash
+    /// Files to hash.
+    #[clap(required = true)]
     files: Vec<String>,
 }
 
